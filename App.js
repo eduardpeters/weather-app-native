@@ -19,7 +19,7 @@ const App = () => {
             </View>
         </SafeAreaView>
     );
-}
+};
 
 const styles = StyleSheet.create({
     bodyWrapper: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     description: {
-        fontSize: 48, 
+        fontSize: 48,
     },
     feels: {
         color: 'black',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
         backgroundColor: 'hotpink',
-    }
-})
+    },
+});
 
 export default App;

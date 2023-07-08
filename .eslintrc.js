@@ -1,31 +1,31 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+    env: {
+        browser: true,
+        es2021: true,
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "@react-native-community"
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:prettier/recommended',
+        '@react-native-community',
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
         },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        ecmaVersion: 'latest',
+        sourceType: 'module',
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "react/jsx-filename-extension": [1, {extensions: [".js", ".jsx"]}],
-        "no-use-before-define": [
-            "error", {
+    plugins: ['react', 'prettier'],
+    rules: {
+        'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+        'no-use-before-define': [
+            'error',
+            {
                 functions: true,
                 classes: true,
                 variables: false,
-            }
-        ]
-    }
-}
+            },
+        ],
+    },
+};
