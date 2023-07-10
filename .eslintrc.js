@@ -27,5 +27,11 @@ module.exports = {
                 variables: false,
             },
         ],
+        'react/no-unstable-nested-components': [
+            'error',
+            {
+                allowAsProps: true,
+            },
+        ],
     },
 };
