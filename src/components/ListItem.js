@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
     item: {
         alignItems: 'center',
-        backgroundColor: 'hotpink',
+        backgroundColor: 'pink',
         borderWidth: 5,
         flexDirection: 'row',
         justifyContent: 'space-around',
