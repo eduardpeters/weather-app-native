@@ -18,10 +18,10 @@ const ErrorItem = ({ message }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: 'red',
-        justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'red',
+        flex: 1,
+        justifyContent: 'center',
     },
     errorDetails: {
         fontSize: 20,
