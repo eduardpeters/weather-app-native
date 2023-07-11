@@ -21,7 +21,7 @@ const CurrentWeather = () => {
         <SafeAreaView style={wrapper}>
             <View style={container}>
                 <Feather
-                    name={weatherType['Drizzle'].icon}
+                    name={weatherType.Drizzle.icon}
                     size={100}
                     color={'black'}
                 />
@@ -37,7 +37,7 @@ const CurrentWeather = () => {
             </View>
             <RowText
                 messageOne={'Its sunny'}
-                messageTwo={weatherType['Mist'].message}
+                messageTwo={weatherType.Mist.message}
                 containerStyles={bodyWrapper}
                 messageOneStyles={description}
                 messageTwoStyles={message}
