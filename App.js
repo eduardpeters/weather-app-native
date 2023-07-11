@@ -8,13 +8,14 @@ import Tabs from './src/components/Tabs';
 
 const App = () => {
     const [loading, setLoading] = useState(true);
-    const [location, setLocation] = useState(null);
     const [error, setError] = useState(null);
-    const [weather, setWeather] = useState([]);
+    const [weather, setWeather] = useState(null);
+    const [lat, setLat] = useState(null);
+    const [lon, setLon] = useState(null);
 
     const fetchWeatherData = async () => {
         try {
-            const res = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=${WEATHER_API_KEY}`);
+            const res = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`);
             const data = await res.json();
             setWeather(data);
         } catch (error) {
@@ -33,13 +34,14 @@ const App = () => {
                 return;
             }
             const currentLocation = await Location.getCurrentPositionAsync({});
-            setLocation(currentLocation);
+            setLat(currentLocation.coords.latitude);
+            setLon(currentLocation.coords.longitude);
             await fetchWeatherData();
         })();
-    }, []);
+    }, [lat, lon]);
 
-    if (location) {
-        console.log(location);
+    if (weather) {
+        console.log(weather);
     }
 
     if (loading) {
